@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OCR Web App</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+</head>
+<body>
+  <main class="container">
+    <h1>OCR Web Application</h1>
+    <p>Upload images or PDFs to extract text, detect tables, and export results.</p>
+    <a class="button" href="{{ url_for('upload_page') }}">Start OCR</a>
+  </main>
+</body>
+</html>

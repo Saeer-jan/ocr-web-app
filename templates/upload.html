@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Upload Documents</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+</head>
+<body>
+  <main class="container">
+    <h1>Upload Documents</h1>
+    <form id="ocr-form" enctype="multipart/form-data">
+      <label class="dropzone" for="files">
+        <input type="file" id="files" name="files" multiple accept=".pdf,.png,.jpg,.jpeg,.bmp,.tiff,.webp" />
+        <span>Drag & drop files here or click to select</span>
+      </label>
+
+      <label>Language
+        <select name="lang" id="lang">
+          {% for lang in languages %}
+          <option value="{{ lang }}">{{ lang }}</option>
+          {% endfor %}
+        </select>
+      </label>
+
+      <label><input type="checkbox" name="detect_tables" checked /> Detect tables</label>
+      <label><input type="checkbox" name="handwriting" /> Handwriting mode</label>
+
+      <button type="submit">Process</button>
+    </form>
+
+    <div id="progress-wrap" class="hidden">
+      <p id="progress-text">Preparing...</p>
+      <progress id="progress" value="0" max="100"></progress>
+    </div>
+  </main>
+
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
