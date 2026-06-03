@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OCR Results</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+</head>
+<body>
+  <main class="container" id="results" data-job-id="{{ job_id }}">
+    <h1>OCR Results</h1>
+    <div id="result-content">Loading...</div>
+    <div class="actions">
+      <a id="export-json" class="button" href="#">Export JSON</a>
+      <a id="export-txt" class="button" href="#">Export TXT</a>
+      <a class="button" href="{{ url_for('upload_page') }}">New Upload</a>
+    </div>
+  </main>
+
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

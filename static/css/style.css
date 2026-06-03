@@ -1,0 +1,11 @@
+:root { color-scheme: light dark; }
+body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+.container { max-width: 760px; margin: 2rem auto; padding: 1rem; }
+h1 { margin-bottom: 0.5rem; }
+.button, button { background: #2563eb; border: none; color: #fff; padding: 0.6rem 1rem; border-radius: 0.4rem; text-decoration: none; cursor: pointer; display: inline-block; }
+.dropzone { display: block; border: 2px dashed #888; border-radius: 0.5rem; padding: 2rem; margin-bottom: 1rem; text-align: center; }
+.dropzone input { display: none; }
+label { display: block; margin: 0.75rem 0; }
+.hidden { display: none; }
+pre { white-space: pre-wrap; background: #1112; padding: 1rem; border-radius: 0.4rem; }
+.actions { margin-top: 1rem; display: flex; gap: 0.5rem; flex-wrap: wrap; }
